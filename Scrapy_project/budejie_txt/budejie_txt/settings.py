@@ -18,7 +18,7 @@ NEWSPIDER_MODULE = 'budejie_txt.spiders'
 MONGO_URI = 'mongodb://localhost:27017/'
 MONGO_DATABASE = 'budejie'
 
-
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'budejie_txt (+http://www.yourdomain.com)'
 
@@ -68,9 +68,9 @@ MONGO_DATABASE = 'budejie'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'budejie_txt.pipelines.BudejieTxtPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'budejie_txt.pipelines.BudejieTxtPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

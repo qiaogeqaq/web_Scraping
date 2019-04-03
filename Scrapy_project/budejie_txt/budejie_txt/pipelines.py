@@ -7,7 +7,7 @@
 
 import pymongo
  
-class BudejieMongoPipeline(object):
+class BudejieTxtPipeline(object):
  
     collection_name = 'scrapy_items'  # 这里的地方是连接的数据库表的名字
  

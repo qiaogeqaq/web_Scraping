@@ -28,7 +28,7 @@ import pymongo
  
 class CsdnblogPipeline(object):
  
-    collection_name = 'scrapy_items'  # 这里的地方是连接的数据库表的名字
+    collection_name = 'scrapy_items'  
  
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
@@ -37,8 +37,8 @@ class CsdnblogPipeline(object):
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            mongo_uri=crawler.settings.get('MONGO_URI'),  # get中有两个参数，一个是 配置的MONGO_URL ，另一个是localhost
-            mongo_db=crawler.settings.get('MONGO_DATABASE', 'budejie')  # 这里的两个参数,第一个是数据库配置的.第二个是它的表的数据库的名字
+            mongo_uri=crawler.settings.get('MONGO_URI'),  
+            mongo_db=crawler.settings.get('MONGO_DATABASE', 'csdnblog')
         )
  
     def open_spider(self, spider):

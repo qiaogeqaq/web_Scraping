@@ -6,7 +6,7 @@ class BudejieSpider(scrapy.Spider):
     name = 'budejie'
     allowed_domains = ['www.budejie.com']
     start_urls = ['http://www.budejie.com/text/']
-    total_page = 1
+    total_page = 4
 
     def parse(self, response):
         item = BudejieTxtItem()
