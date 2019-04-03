@@ -15,16 +15,15 @@ SPIDER_MODULES = ['budejie_txt.spiders']
 NEWSPIDER_MODULE = 'budejie_txt.spiders'
 
 
-MONGODB_HOST = '127.0.0.1'
-MONGODB_PORT = 27017
-MONGODB_DBNAME = 'BUDEJIE'
-MONGODB_SHEETNAME = 'BUDEJIECONTENT'
+MONGO_URI = 'mongodb://localhost:27017/'
+MONGO_DATABASE = 'budejie'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'budejie_txt (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+#ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

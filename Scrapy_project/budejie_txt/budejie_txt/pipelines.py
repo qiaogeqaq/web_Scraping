@@ -6,22 +6,30 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import pymongo
-from scrapy.conf import settings
-
-class BudejieTxtPipeline(object):
-    def __init__(self):
-        host = settings["MONGODB_HOST"]
-        port = settings["MONGODB_PORT"]
-        dbname = settings["MONGODB_DBNAME"]
-        sheetname = settings["MONGODB_SHEETNAME"]
-
-        client = pymongo.MongoClient(host = host,port = port)
-
-        mydb = client[dbname]
-
-        self.post = mydb[sheetname]
-
+ 
+class BudejieMongoPipeline(object):
+ 
+    collection_name = 'scrapy_items'  # 这里的地方是连接的数据库表的名字
+ 
+    def __init__(self, mongo_uri, mongo_db):
+        self.mongo_uri = mongo_uri
+        self.mongo_db = mongo_db
+ 
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            mongo_uri=crawler.settings.get('MONGO_URI'),  # get中有两个参数，一个是 配置的MONGO_URL ，另一个是localhost
+            mongo_db=crawler.settings.get('MONGO_DATABASE', 'items')  # 这里的两个参数,第一个是数据库配置的.第二个是它的表的数据库的名字
+        )
+ 
+    def open_spider(self, spider):
+        self.client = pymongo.MongoClient(self.mongo_uri)
+        self.db = self.client[self.mongo_db]
+ 
+    def close_spider(self, spider):
+        self.client.close()
+ 
     def process_item(self, item, spider):
-        data = dict(item)
-        self.post.insert(data)
+        self.db[self.collection_name].insert_one(dict(item))
         return item
+
