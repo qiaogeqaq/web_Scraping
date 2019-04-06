@@ -1,0 +1,32 @@
+link,desc,title
+/xml/index.asp,XML 教程,XML 教程
+/xml/xml_intro.asp,XML 简介,XML 简介
+/xml/xml_usedfor.asp,XML 的用途,XML 用途
+/xml/xml_tree.asp,XML 树结构,XML 树结构
+/xml/xml_syntax.asp,XML 语法规则,XML 语法
+/xml/xml_elements.asp,XML 元素,XML 元素
+/xml/xml_attributes.asp,XML 属性,XML 属性
+/xml/xml_dtd.asp,XML 验证,XML 验证
+/xml/xml_validator.asp,XML 验证器,XML 验证器
+/xml/xml_browsers.asp,XML 浏览器支持,XML 浏览器
+/xml/xml_view.asp,查看 XML 文件,XML 查看
+/xml/xml_display.asp,使用 CSS 显示 XML,XML CSS
+/xml/xml_xsl.asp,使用 XSLT 显示 XML,XML XSLT
+/xml/xml_http.asp,XMLHttpRequest 对象,XML HTTP Request
+/xml/xml_parser.asp,XML 解析器,XML 解析器
+/xml/xml_dom.asp,XML DOM,XML DOM
+/xml/xml_to_html.asp,XML to HTML,XML to HTML
+/xml/xml_applications.asp,XML 应用程序,XML 应用程序
+/xml/xml_namespaces.asp,XML 命名空间（XML Namespaces）,XML 命名空间
+/xml/xml_cdata.asp,XML CDATA,XML CDATA
+/xml/xml_encoding.asp,XML 编码,XML 编码
+/xml/xml_server.asp,服务器上的 XML,XML 服务器
+/xml/xml_dom_advanced.asp,XML DOM 高级,XML DOM 高级
+/xml/xml_dont.asp,XML 注意事项,XML 注意事项
+/xml/xml_savedata.asp,把数据存储到 XML 文件,XML 数据存储
+/xml/xml_technologies.asp,XML 的相关技术,XML 技术
+/xml/xml_real_life.asp,现实生活中的 XML,XML 现实案例
+/xml/xml_editors.asp,XML 编辑器,XML 编辑器
+/xml/xml_summary.asp,您已经学习了 XML，下一步学习什么内容呢？,XML 教程总结
+/example/xmle_examples.asp,XML 实例,XML 实例
+/xml/xml_quiz.asp,XML 测验,XML 测验
