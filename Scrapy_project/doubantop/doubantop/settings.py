@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for bilibiliusers project
+# Scrapy settings for doubantop project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,27 +9,22 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'bilibiliusers'
+BOT_NAME = 'doubantop'
 
-SPIDER_MODULES = ['bilibiliusers.spiders']
-NEWSPIDER_MODULE = 'bilibiliusers.spiders'
-
-
-MONGO_URI = 'mongodb://localhost:27017/'
-MONGO_DATABASE = 'bilibiliusersdata'
+SPIDER_MODULES = ['doubantop.spiders']
+NEWSPIDER_MODULE = 'doubantop.spiders'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0'
 
 
 
-IPPOOL = [
-    {"ipaddr":"171.41.81.72:9999"},
-    {"ipaddr":"171.41.82.74:9999"},
-    
-]
+MONGO_URI='mongodb://localhost:27017/'
+MONGO_DATABASE = 'doubantop'
 
-UAPOOL = ["Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50"]
+
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'bilibiliusers (+http://www.yourdomain.com)'
+#USER_AGENT = 'doubantop (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -60,19 +55,14 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'bilibiliusers.middlewares.BilibiliusersSpiderMiddleware': 543,
+#    'doubantop.middlewares.DoubantopSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'bilibiliusers.middlewares.BilibiliusersDownloaderMiddleware': 543,
-    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware':123,
-    'bilibiliusers.middlewares.IPPOOLS':125,
-    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':126,
-    'bilibiliusers.middlewares.Uamid':127
-
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'doubantop.middlewares.DoubantopDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -83,7 +73,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'bilibiliusers.pipelines.BilibiliusersPipeline': 300,
+    'doubantop.pipelines.DoubantopPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
